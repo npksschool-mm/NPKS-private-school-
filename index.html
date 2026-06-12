@@ -1,86 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="my">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NPKS Private School</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-    }
-
-    header {
-      background: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background: #34495e;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPKS Private School</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f4f8; color: #333; line-height: 1.6; }
+        
+        /* Header & Navigation */
+        header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 40px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 32px; letter-spacing: 1px; }
+        header p { margin: 10px 0 0 0; font-size: 16px; opacity: 0.9; }
+        nav { background: #2c3e50; padding: 12px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 15px; }
+        nav a:hover { color: #f1c40f; }
+        
+        /* Main Layout */
+        .container { padding: 20px; max-width: 1000px; margin: auto; }
+        .card { background: white; padding: 25px; margin-bottom: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .card h2 { color: #1e3c72; margin-top: 0; border-bottom: 3px solid #3498db; padding-bottom: 10px; font-size: 22px; }
+        
+        /* Photo Gallery Grid */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 15px; }
+        .gallery-item { background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.3s; }
+        .gallery-item img:hover { transform: scale(1.05); }
+        .gallery-item p { padding: 10px; margin: 0; font-size: 14px; text-align: center; background: #fafafa; font-weight: bold; color: #555; }
+        
+        /* Contact Section */
+        .contact-info p { margin: 15px 0; font-size: 16px; }
+        .contact-info strong { width: 120px; color: #2c3e50; display: inline-block; }
+        .btn-link { background-color: #2a5298; color: white; padding: 6px 15px; text-decoration: none; border-radius: 4px; font-size: 14px; margin-left: 10px; display: inline-block; }
+        .btn-link:hover { background-color: #1e3c72; }
+        
+        footer { background: #1e3c72; color: white; text-align: center; padding: 20px; margin-top: 40px; font-size: 14px; }
+    </style>
 </head>
 <body>
 
 <header>
-  <h1>NPKS Private School</h1>
-  <p>Welcome to our school website</p>
+    <h1>NPKS Private School</h1>
+    <p>နွေးထွေးပျူငှာစွာ ကြိုဆိုပါသည်</p>
 </header>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Teachers</a>
-  <a href="#">Contact</a>
+    <a href="#">ပင်မစာမျက်နှာ</a>
+    <a href="#">ကျောင်းလှုပ်ရှားမှုများ</a>
+    <a href="#">ဆက်သွယ်ရန်</a>
 </nav>
 
 <div class="container">
-  <div class="card">
-    <h2>About School</h2>
-    <p>This is a private school website built for students and parents.</p>
-  </div>
 
-  <div class="card">
-    <h2>Notice</h2>
-    <p>Admissions are now open for 2026 academic year.</p>
-  </div>
+    <div class="card">
+        <h2>ကျောင်းတော်ကြီးအကြောင်း မိတ်ဆက်</h2>
+        <p style="text-indent: 30px; text-align: justify;">
+            NPKS Private School မှ လှိုက်လှဲစွာ ကြိုဆိုပါသည်။ ကျွန်ုပ်တို့ကျောင်းသည် ရင်သွေးငယ်များ၏ အနာဂတ် ပညာရေး ထူးချွန်ထက်မြက်စေရန်နှင့် ဗလငါးတန်နှင့်ပြည့်စုံသော လူရည်မွန်များ ပေါ်ထွန်းလာစေရန်အတွက် ခေတ်မီသင်ကြားရေးစနစ်များ၊ အရည်အချင်းပြည့်မီသော ဆရာ/ဆရာမများနှင့် စနစ်တကျ ပြုစုပျိုးထောင် သင်ကြားပေးနေသော ကိုယ်ပိုင်ကျောင်းဖြစ်ပါသည်။
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>ကျောင်းတွင်းလှုပ်ရှားမှုနှင့် ဂုဏ်ပြုမှတ်တမ်းဓာတ်ပုံများ</h2>
+        <div class="gallery">
+            
+            <div class="gallery-item">
+                <img src="2676.jpg" alt="NPKS School">
+                <p>ဂုဏ်ပြုဆုတံဆိပ် ချီးမြှင့်ခြင်း မှတ်တမ်း</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2675.jpg" alt="NPKS School">
+                <p>ကျောင်းသားဟောင်းများ အောင်မြင်မှု မှတ်တမ်း</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2674.jpg" alt="NPKS School">
+                <p>သင်ရိုးညွှန်းတမ်း ဆွေးနွေးပွဲ</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2673.jpg" alt="NPKS School">
+                <p>ကျောင်းတွင်း စာမေးပွဲ အောင်စာရင်းများ</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2672.jpg" alt="NPKS School">
+                <p>အနုပညာနှင့် ကာယလှုပ်ရှားမှုမှတ်တမ်း</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2671.jpg" alt="NPKS School">
+                <p>ကျောင်းသား/သူများ၏ တီထွင်ဖန်တီးမှုများ</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2670.jpg" alt="NPKS School">
+                <p>ဂုဏ်ထူးဆောင် သင်တန်းဆင်းပွဲ အမှတ်တရ</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2669.jpg" alt="NPKS School">
+                <p>ဆရာများနှင့် ကျောင်းသားမိဘများ တွေ့ဆုံပွဲ</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2668.jpg" alt="NPKS School">
+                <p>ကျောင်းသားဟောင်းများ၏ ထူးချွန်ဆုရရှိမှုများ</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2667.jpg" alt="NPKS School">
+                <p>အထူးအောင်မြင်မှု သတင်းလွှာ</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>ဆက်သွယ်ရန် လိပ်စာနှင့် ဖုန်းနံပါတ်များ</h2>
+        <div class="contact-info">
+            <p><strong>📍 လိပ်စာ:</strong> ကချင်ပြည်နယ်၊မိုးညှင်းမြို့၊အောင်သပြေ ၁ရပ်ကွက်၊လမ်းသွယ်၁၁×၁၂ကြား၊အထက၂နောက်ကျော။ (လိပ်စာအပြည့်အစုံကို ဤနေရာတွင် ရိုက်ထည့်နိုင်ပါသည်)</p>
+            <p><strong>📞 ဖုန်းနံပါတ်:</strong> 09-402 125 526</p>
+            <p><strong>✉️ အီးမေးလ်:</strong> npksschool@gmail.com</p>
+            <p>
+                <strong>🌐 Facebook:</strong> 
+                <a href="https://www.facebook.com" target="_blank" class="btn-link">Facebook Page သို့သွားရန်</a>
+            </p>
+        </div>
+    </div>
+
 </div>
 
 <footer>
-  <p>© 2026 NPKS Private School</p>
+    <p>© 2026 NPKS Private School. All rights reserved.</p>
 </footer>
 
 </body>
